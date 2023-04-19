@@ -23,6 +23,12 @@ Important Dates
 Call for Demos!
 ===============
 
+.. |SC23Sub| raw:: html
+
+   <a href="https://submissions.supercomputing.org/" target="_blank">https://submissions.supercomputing.org/</a>
+
+You can create a submission at |SC23Sub|.
+
 
 Diversity and Inclusion
 =======================
