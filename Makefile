@@ -6,8 +6,8 @@ SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = .
 BUILDDIR      = _build
 
-sph_user = $(shell find `python -m site --user-base` -name sphinx-build || echo "")
-sph_def  = $(shell find `python -c "import sysconfig; print(sysconfig.get_path('scripts'))"` -name sphinx-build || echo "")
+sph_user = $(shell find `python3 -m site --user-base` -name sphinx-build || echo "")
+sph_def  = $(shell find `python3 -c "import sysconfig; print(sysconfig.get_path('scripts'))"` -name sphinx-build || echo "")
 ifneq ($(wildcard $(sph_user)), )
 	SPHINXBUILD = $(sph_user)
 else
@@ -35,9 +35,9 @@ pub:
 	git checkout pub
 	git rm -r docs
 	git commit -m "remove old docs"
-	git merge -m "merge in master" master
+	git merge -m "merge in main" main
 	make
 	git add docs
 	git commit -m "publish"
 	git push
-	git checkout master
+	git checkout main
